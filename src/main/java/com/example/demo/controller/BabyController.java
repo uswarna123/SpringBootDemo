@@ -13,6 +13,7 @@ public class BabyController {
 @Autowired
 HelloService helloService;
 
+//Read value from properties
 @Value("${babyWeight: baby weight not found}")
 String babyWeight;
 
