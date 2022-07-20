@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.services.ArrayInput;
+import com.example.demo.services.GetColorNameService;
 import com.example.demo.services.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,12 +12,12 @@ public class HelloController {
     @Autowired
    HelloService helloService;
     @Autowired
-    ArrayInput arrayInput;
+    GetColorNameService colorNameService;
 
     @GetMapping("/arrayInput/{input}")
-    public String getArrayInput(@PathVariable String input)
+    public String getColorName(@PathVariable String input)
     {
-        String str=arrayInput.arrayInput(input);
+       String str=colorNameService.getColorName(input);
 
         return str;
     }
