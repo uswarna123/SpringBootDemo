@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 //@Component
-public class GetColorNameService {
+public class NameService {
 
     public String getColorName(String input) {
         String[] colors = {"pink", "yellow", "red"};

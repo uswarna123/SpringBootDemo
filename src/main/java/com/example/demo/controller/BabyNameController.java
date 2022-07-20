@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class BabyController {
+public class BabyNameController {
 
 @Autowired
 HelloService helloService;

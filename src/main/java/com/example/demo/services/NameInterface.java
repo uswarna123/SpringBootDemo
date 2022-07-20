@@ -1,6 +1,6 @@
 package com.example.demo.services;
 
-public interface HelloInterface {
+public interface NameInterface {
 
     public String displayName(String name);
 
