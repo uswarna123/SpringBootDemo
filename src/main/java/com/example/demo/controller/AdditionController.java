@@ -1,6 +1,5 @@
 package com.example.demo.controller;
 
-import com.example.demo.services.HelloInterface;
 import com.example.demo.services.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
