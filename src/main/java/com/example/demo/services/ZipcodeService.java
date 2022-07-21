@@ -11,9 +11,9 @@ public class ZipcodeService {
     ZipcodeDao zipcodeDao;
     final public String getStateByZipcode(int zipcode){
 
-        String list = zipcodeDao.getCountry();
+        String string = zipcodeDao.getCountry();
 
-        return "zipcode  "+list;
+        return "zipcode  "+string;
     }
 }
 
