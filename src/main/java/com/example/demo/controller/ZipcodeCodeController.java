@@ -1,20 +1,21 @@
 package com.example.demo.controller;
 
-import com.example.demo.services.StudentCourseService;
+import com.example.demo.services.ZipcodeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class StudentCourseController {
+public class ZipcodeCodeController {
 
     @Autowired
-    StudentCourseService studentCourseService;
+    ZipcodeService zipcodeService;
 
-    @GetMapping("/courseID/{id}")
-    public String displayStudent(final @PathVariable int id){
-       String str=studentCourseService.displayStudentCourse(id);
+    @GetMapping("/us/{zipcode}")
+   final public String getCountry(@PathVariable int zipcode){
+     String str=zipcodeService.getStateByZipcode(zipcode);
         return str;
     }
+
 }
