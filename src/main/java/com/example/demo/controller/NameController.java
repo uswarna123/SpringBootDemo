@@ -10,12 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class NameController {
 
     @Autowired
-    NameService colorNameService;
-
+    NameService nameService;
     @GetMapping("/arrayInput/{input}")
     public String getColorName(@PathVariable String input)
     {
-       String str=colorNameService.getColorName(input);
+       String str=nameService.getColorName(input);
 
         return str;
     }
@@ -23,9 +22,14 @@ public class NameController {
     @GetMapping("/print/{name}")
     public String print(@PathVariable String name)
     {
-       // String str=helloService.displayName(name);
-        return "";
+       String str=nameService.getName(name);
+        return str;
 
+    }
+    @GetMapping("/?name={name}")
+    public String displayPersonByName(@PathVariable String name){
+       String str=nameService.getName(name);
+        return str;
     }
 
 }
