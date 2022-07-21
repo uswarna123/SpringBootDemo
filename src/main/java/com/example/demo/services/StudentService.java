@@ -1,6 +1,6 @@
 package com.example.demo.services;
 
-import com.example.demo.Model.Student;
+import com.example.demo.model.Student;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
